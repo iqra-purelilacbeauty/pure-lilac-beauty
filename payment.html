@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Checkout | Pure Lilac Beauty</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+<div class="moving-logo">
+    <img src="images/logo.png" alt="Pure Lilac Beauty Logo">
+</div>
+<header class="top-header">
+
+<div class="logo">
+<h1>Pure Lilac Beauty</h1>
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search products...">
+</div>
+
+<div class="icons">
+<a href="profile.html">👤</a>
+<a href="basket.html">🛒</a>
+</div>
+<div class="dropdown">
+
+<button class="menu-button">☰</button>
+
+<div class="dropdown-content">
+<a href="index.html">Home</a>
+<a href="products.html">Products</a>
+<a href="contact.html">Contact</a>
+</div>
+
+</div>
+
+</div>
+
+
+</header>
+
+
+
+<section class="checkout">
+
+<h2>Secure Checkout</h2>
+
+<form id="paymentForm">
+
+<label>Full Name</label>
+<input type="text" required>
+
+<label>Email Address</label>
+<input type="email" required>
+
+<label>Delivery Address</label>
+<textarea required></textarea>
+
+<label>Card Number</label>
+<input type="text" placeholder="1234 5678 9012 3456" maxlength="19" required>
+
+<label>Expiry Date</label>
+<input type="text" placeholder="MM/YY" required>
+
+<label>CVV</label>
+<input type="password" maxlength="3" required>
+
+<button type="submit">Pay Now</button>
+</form>
+
+<p id="orderMessage" style="display:none; color:green; font-size:20px; font-weight:bold; text-align:center; margin-top:20px;">
+✅ Your order has been placed successfully! Thank you for shopping with Pure Lilac Beauty.
+</p>
+
+</section>
+
+<footer>
+<p>© 2025 Pure Lilac Beauty</p>
+</footer>
+
+<script src="script.js"></script>
+<script>
+document.getElementById("paymentForm").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    alert("✅ Your order has been placed successfully!\n\nThank you for shopping with Pure Lilac Beauty.");
+
+    this.reset();
+
+});
+</script>
+<script>
+document.getElementById("paymentForm").addEventListener("submit", function(event){
+
+    event.preventDefault();
+
+    document.getElementById("orderMessage").style.display = "block";
+
+    this.reset();
+
+});
+<!-- Accessibility: Text Size Controls -->
+<section class="accessibility-text">
+    <h3>Accessibility: Text Size</h3>
+    <p>Adjust the size of text to suit your needs:</p>
+    <div class="text-size-buttons">
+        <button onclick="smallerText()">A-</button>
+        <button onclick="resetText()">Reset</button>
+        <button onclick="largerText()">A+</button>
+    </div>
+</section>
+
+</script>
+<!-- Footer -->
+
+<footer>
+<footer>
+    <p>Follow us:</p>
+
+    <a href="https://www.instagram.com/yourusername" target="_blank">
+        <img src="images/facebook.png" alt="Instagram" width="35">
+    </a>
+
+    <a href="https://www.facebook.com/yourusername" target="_blank">
+        <img src="fb.png" alt="Facebook" width="35">
+    </a>
+</footer>
+</footer>
+<p>© 2026 Pure Lilac Beauty</p>
+
+<p>
+
+<a href="index.html">Home</a> |
+
+<a href="products.html">Products</a> |
+
+<a href="contact.html">Contact</a>
+
+</p>
+
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+
+</body>
+</html>

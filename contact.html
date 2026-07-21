@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Contact | Pure Lilac Beauty</title>
+
+<link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+
+<div class="moving-logo">
+    <img src="images/logo.png" alt="Pure Lilac Beauty Logo">
+</div>
+
+<header class="top-header">
+
+<div class="logo">
+<h1>Pure Lilac Beauty</h1>
+</div>
+
+<div class="search">
+<input type="text" placeholder="Search products...">
+</div>
+
+<div class="icons">
+
+<a href="profile.html">👤</a>
+
+<a href="basket.html">🛒</a>
+
+<div class="dropdown">
+
+<button class="menu-button">☰</button>
+
+<div class="dropdown-content">
+    <a href="index.html">Home</a>
+    <a href="products.html">Products</a>
+    <a href="contact.html">Contact</a>
+</div>
+
+</div>
+
+</div>
+
+</header>
+
+<nav>
+</nav>
+
+<section>
+
+<h2>Contact Us</h2>
+
+<p>Active 24/7</p>
+
+<div class="contact-box">
+
+<div>
+
+<h3>📞 Phone</h3>
+
+<p>+44 7941959145</p>
+
+</div>
+
+<div>
+
+<h3>📧 Email</h3>
+
+<p>purelilacbeauty7@gmail.com</p>
+
+</div>
+
+</div>
+
+<h2>Send a Message</h2>
+
+<form id="contactForm">
+
+<input type="text" placeholder="First Name" required>
+
+<input type="text" placeholder="Last Name" required>
+
+<input type="email" placeholder="Email Address" required>
+
+<input type="tel" placeholder="Phone Number">
+
+<textarea placeholder="Message" required></textarea>
+
+<button type="submit">Send Message</button>
+
+</form>
+
+<p id="successMessage" style="display:none; color:green; font-weight:bold; margin-top:20px;">
+✅ Thank you! Your message has been sent successfully.
+</p>
+
+</section>
+<!-- Accessibility: Text Size Controls -->
+<section class="accessibility-text">
+    <h3>Accessibility: Text Size</h3>
+    <p>Adjust the size of text to suit your needs:</p>
+    <div class="text-size-buttons">
+        <button onclick="smallerText()">A-</button>
+        <button onclick="resetText()">Reset</button>
+        <button onclick="largerText()">A+</button>
+    </div>
+</section>
+<footer>
+
+<p>Follow us:</p>
+
+<a href="https://www.instagram.com/yourusername" target="_blank">
+    <img src="facebook.png" alt="Instagram" width="35">
+</a>
+
+<a href="https://www.facebook.com/yourusername" target="_blank">
+    <img src="fb.png" alt="Facebook" width="35">
+</a>
+
+<p>© 2026 Pure Lilac Beauty</p>
+
+<p>
+<a href="index.html">Home</a> |
+<a href="products.html">Products</a> |
+<a href="contact.html">Contact</a>
+</p>
+
+</footer>
+
+<script>
+document.getElementById("contactForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    document.getElementById("successMessage").style.display = "block";
+
+    this.reset();
+});
+</script>
+
+<script src="script.js"></script>
+
+</body>
+</html>

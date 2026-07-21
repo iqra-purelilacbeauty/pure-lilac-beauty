@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Product Details | Pure Lilac Beauty</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- Moving Logo -->
+<div class="moving-logo">
+    <img src="images/logo.png" alt="Pure Lilac Beauty Logo">
+</div>
+
+<!-- Header -->
+<header class="top-header">
+    <div class="logo">
+        <h1>Pure Lilac Beauty</h1>
+    </div>
+
+    <div class="search">
+        <input type="text" placeholder="Search products...">
+    </div>
+
+    <div class="icons">
+        <a href="profile.html">👤</a>
+        <a href="basket.html">🛒</a>
+
+        <div class="dropdown">
+            <button class="menu-button">☰</button>
+            <div class="dropdown-content">
+                <a href="index.html">Home</a>
+                <a href="products.html">Products</a>
+                <a href="contact.html">Contact</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+<!-- Product Details Section -->
+<section class="product-details">
+    <div class="product-image-large">
+        <img id="productImage" src="" alt="">
+    </div>
+
+    <div class="product-info">
+        <h2 id="productName"></h2>
+        <h3 id="productPrice"></h3>
+        <p id="productDesc"></p>
+
+        <h4>Available Shades</h4>
+        <div id="productShades" class="colours"></div>
+
+        <h4>Benefits</h4>
+        <ul id="productBenefits"></ul>
+
+        <h4>How to Use</h4>
+        <p id="productUse"></p>
+
+        <button class="add-to-basket" id="basketBtn">Add to Basket</button>
+
+        <br><br>
+        <a href="products.html"><button>Back to Products</button></a>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <p>Follow us:</p>
+    <a href="https://www.instagram.com/yourusername" target="_blank">
+        <img src="images/instagram.png" alt="Instagram" width="35">
+    </a>
+    <a href="https://www.facebook.com/yourusername" target="_blank">
+        <img src="images/fb.png" alt="Facebook" width="35">
+    </a>
+    <p>© 2026 Pure Lilac Beauty</p>
+    <p>
+        <a href="index.html">Home</a> |
+        <a href="products.html">Products</a> |
+        <a href="contact.html">Contact</a>
+    </p>
+</footer>
+
+<script src="script.js"></script>
+
+<!-- Basic JavaScript - A-Level Standard -->
+<script>
+// Simple list of all products - easy to read and edit
+var allProducts = [
+    {
+        id: "blossom-cheek",
+        name: "Blossom Cheek Blush Palette",
+        price: "£26.00",
+        image: "images/blush pallete.png",
+        description: "Ultra-pigmented blush with a smooth finish.",
+        shades: ["pink", "red", "coral", "purple"],
+        benefits: ["Lightweight formula", "Easy to blend", "Long-lasting colour", "Suitable for all skin types"],
+        use: "Apply with a blush brush to the apples of your cheeks and blend upwards."
+    },
+    {
+        id: "halo-highlighter",
+        name: "Halo Highlighter",
+        price: "£25.00",
+        image: "images/pressed powder.png",
+        description: "Radiant highlighter for a glowing finish.",
+        shades: ["white", "cream", "gold", "silver"],
+        benefits: ["Buildable coverage", "Shimmer finish", "Smooth texture", "Vegan friendly"],
+        use: "Sweep across cheekbones, brow bone and cupid's bow."
+    },
+    {
+        id: "chisel-stick",
+        name: "Chisel Stick",
+        price: "£22.00",
+        image: "images/blush and concearer stick.png",
+        description: "Cream contour stick for an effortless blend.",
+        shades: ["cream", "beige", "nude", "brown"],
+        benefits: ["Creamy formula", "Easy to blend", "Dual-ended design", "Travel friendly"],
+        use: "Draw along cheekbones and jawline, then blend out."
+    },
+    {
+        id: "contour-creme-stick",
+        name: "Contour Creme Stick",
+        price: "£16.00",
+        image: "images/contour stick.png",
+        description: "Sculpt and define with a creamy formula.",
+        shades: ["beige", "lightbrown", "brown", "darkbrown"],
+        benefits: ["Sculpts features", "Matte finish", "Long wear", "Suitable for all skin tones"],
+        use: "Apply to the hollows of your cheeks and blend well."
+    },
+    {
+        id: "fresh-tone-concealer",
+        name: "Fresh Tone Concealer",
+        price: "£28.00",
+        image: "images/concealer.png",
+        description: "Brightens dark circles with flawless coverage.",
+        shades: ["cream", "beige", "nude", "darkbrown"],
+        benefits: ["Full coverage", "Brightening", "Hydrating", "Crease-resistant"],
+        use: "Dot under eyes and on blemishes, then blend."
+    },
+    {
+        id: "radiant-bronzer",
+        name: "Radiant Bronzer",
+        price: "£22.00",
+        image: "images/powder bronzer.png",
+        description: "Soft bronzing powder with a natural finish.",
+        shades: ["gold", "brown", "darkbrown"],
+        benefits: ["Sun-kissed finish", "Silky texture", "Buildable", "Suitable for sensitive skin"],
+        use: "Apply to the perimeter of your face for warmth."
+    },
+    {
+        id: "soft-fix-primer",
+        name: "Soft Fix Primer",
+        price: "£20.00",
+        image: "images/primer.png",
+        description: "Keeps your makeup looking fresh all day.",
+        shades: ["white", "cream"],
+        benefits: ["Smooths texture", "Prolongs makeup wear", "Hydrates skin", "Non-greasy"],
+        use: "Apply a small amount to clean skin before foundation."
+    },
+    {
+        id: "kiss-lip-liner",
+        name: "Kiss Lip Liner",
+        price: "£21.00",
+        image: "images/lip liner.png",
+        description: "Long-lasting lip liner with a smooth finish.",
+        shades: ["red", "burgundy", "coral", "brown"],
+        benefits: ["Prevents feathering", "Creamy texture", "Long-lasting", "Defines lips"],
+        use: "Outline lips before lipstick, or fill in completely."
+    },
+    {
+        id: "velvet-prep",
+        name: "Velvet Prep Primer",
+        price: "£18.00",
+        image: "images/grey primer.png",
+        description: "Creates a smooth base before makeup application.",
+        shades: ["white"],
+        benefits: ["Pore-blurring", "Velvet finish", "Lightweight", "Silicone-free"],
+        use: "Smooth evenly over face before applying makeup."
+    },
+    {
+        id: "floral-matte-finish",
+        name: "Floral Matte Finish Setting Spray",
+        price: "£31.00",
+        image: "images/setting spray.png",
+        description: "Setting spray for a soft matte look that lasts all day.",
+        shades: ["white"],
+        benefits: ["12-hour wear", "Matte finish", "Floral scent", "Non-drying"],
+        use: "Hold 20cm from face and spritz after makeup."
+    },
+    {
+        id: "pure-radiance-base",
+        name: "Pure Radiance Base Foundation",
+        price: "£22.00",
+        image: "images/foundation.png",
+        description: "Ultra-blurring foundation for a flawless, natural finish.",
+        shades: ["cream", "beige", "nude", "brown", "darkbrown"],
+        benefits: ["Full coverage", "Long-lasting", "Hydrating", "Suitable for all skin types"],
+        use: "Apply a small amount to skin and blend with a sponge or brush for even coverage."
+    },
+    {
+        id: "opal-petal-lipstick",
+        name: "Opal Petal Lip Stick",
+        price: "£18.00",
+        image: "images/lip stick.png",
+        description: "Highly pigmented lipstick with a smooth, creamy finish.",
+        shades: ["nude", "pink", "red", "berry"],
+        benefits: ["Vibrant colour", "Moisturising", "Cruelty free", "Glides on easily"],
+        use: "Apply directly to clean lips, or use with lip liner."
+    },
+    {
+        id: "rose-gold-collection",
+        name: "Rose Gold Makeup Collection",
+        price: "£24.00",
+        image: "images/rose gold makeup.png",
+        description: "Luxury beauty collection with warm rose gold tones.",
+        shades: ["gold", "rose", "bronze", "champagne"],
+        benefits: ["Co-ordinated shades", "Buildable intensity", "Travel friendly", "Perfect for special occasions"],
+        use: "Use shades individually or blend together."
+    }
+];
+
+// Get the product ID from the link
+var linkInfo = window.location.search;
+var chosenID = linkInfo.substring(4); // Removes "?id=" from the text
+
+// Find the matching product
+var currentProduct = allProducts[0]; // Default to first product
+for (var i = 0; i < allProducts.length; i++) {
+    if (allProducts[i].id == chosenID) {
+        currentProduct = allProducts[i];
+        break;
+    }
+}
+
+// Put the product details onto the page
+document.getElementById("productImage").src = currentProduct.image;
+document.getElementById("productImage").alt = currentProduct.name;
+document.getElementById("productName").textContent = currentProduct.name;
+document.getElementById("productPrice").textContent = currentProduct.price;
+document.getElementById("productDesc").textContent = currentProduct.description;
+document.getElementById("productUse").textContent = currentProduct.use;
+
+// Add shade circles
+var shadeBox = document.getElementById("productShades");
+shadeBox.innerHTML = "";
+for (var s = 0; s < currentProduct.shades.length; s++) {
+    var newShade = document.createElement("span");
+    newShade.className = "circle " + currentProduct.shades[s];
+    shadeBox.appendChild(newShade);
+}
+
+// Add benefit list items
+var benefitBox = document.getElementById("productBenefits");
+benefitBox.innerHTML = "";
+for (var b = 0; b < currentProduct.benefits.length; b++) {
+    var newBenefit = document.createElement("li");
+    newBenefit.textContent = currentProduct.benefits[b];
+    benefitBox.appendChild(newBenefit);
+}
+
+// Set basket button details
+var btn = document.getElementById("basketBtn");
+btn.setAttribute("data-name", currentProduct.name);
+btn.setAttribute("data-price", currentProduct.price.replace("£", ""));
+btn.setAttribute("data-image", currentProduct.image);
+</script>
+
+</body>
+</html>
